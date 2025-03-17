@@ -754,6 +754,100 @@ async def listar_partidos(id_partido: int, db: Session = Depends(get_db)):
 
 
 
+
+
+
+# Endpoint GET para obtener todos los usuarios
+@app.get("/usuarios1", response_model=list[clie])
+async def obtener_usuarios(db: Session = Depends(get_db)):
+    
+    # Consultar todos los registros de usuarios en la base de datos
+    usuarios = db.query(Registro).all()
+
+    # Si no hay usuarios registrados, lanzar un error 404
+    if not usuarios:
+        raise HTTPException(status_code=404, detail="No se encontraron usuarios")
+
+    # Devolver los usuarios encontrados
+    return usuarios
+
+
+
+
+
+
+
+
+# Endpoint GET para obtener todos los usuarios
+@app.get("/usuarios1", response_model=list[clie])
+async def obtener_usuarios(db: Session = Depends(get_db)):
+    
+    # Consultar todos los registros de usuarios en la base de datos
+    usuarios = db.query(Registro).all()
+
+    # Si no hay usuarios registrados, lanzar un error 404
+    if not usuarios:
+        raise HTTPException(status_code=404, detail="No se encontraron usuarios")
+
+    # Devolver los usuarios encontrados
+    return usuarios
+
+
+
+
+
+
+
+
+
+# Endpoint GET para obtener todos los usuarios
+@app.get("/usuarios1", response_model=list[clie])
+async def obtener_usuarios(db: Session = Depends(get_db)):
+    
+    # Consultar todos los registros de usuarios en la base de datos
+    usuarios = db.query(Registro).all()
+
+    # Si no hay usuarios registrados, lanzar un error 404
+    if not usuarios:
+        raise HTTPException(status_code=404, detail="No se encontraron usuarios")
+
+    # Devolver los usuarios encontrados
+    return usuarios
+
+
+
+
+
+
+
+
+
+
+# Endpoint GET para obtener todos los usuarios
+@app.get("/usuarios1", response_model=list[clie])
+async def obtener_usuarios(db: Session = Depends(get_db)):
+    
+    # Consultar todos los registros de usuarios en la base de datos
+    usuarios = db.query(Registro).all()
+
+    # Si no hay usuarios registrados, lanzar un error 404
+    if not usuarios:
+        raise HTTPException(status_code=404, detail="No se encontraron usuarios")
+
+    # Devolver los usuarios encontrados
+    return usuarios
+
+
+
+
+
+
+
+
+
+
+
+
 # Endpoint GET para obtener todos los usuarios
 @app.get("/usuarios", response_model=list[clie])
 async def obtener_usuarios(db: Session = Depends(get_db)):
